@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #06060f;
+  --bg-secondary: #0f0f1e;
+  --bg-card: #12121f;
+  --accent-violet: #7c3aed;
+  --accent-cyan: #06b6d4;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--bg-primary);
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .font-black, .font-bold {
+  font-family: 'Syne', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #7c3aed33; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #7c3aed66; }
+
+/* Slider override for violet theme */
+[data-radix-slider-thumb] {
+  background: white !important;
+  border: 2px solid #7c3aed !important;
+}
+[data-radix-slider-range] {
+  background: linear-gradient(to right, #7c3aed, #06b6d4) !important;
+}
+
+@layer base {
+  :root { --radius: 0.75rem; }
+}
